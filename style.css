@@ -66,8 +66,7 @@ body {
 }
 /*inicio*/
 .inicio{
-    background: linear-gradient(to top, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.555)),
-    url(images/fondo.png) no-repeat center;
+    background: url(images/fondo.png) no-repeat center;
     background-size: cover;
     height: 90vh;
     color: #fff;
