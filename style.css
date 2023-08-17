@@ -27,6 +27,7 @@ body {
     left: 0;
     z-index: 99;
 }
+
 .contenedor-header header{
     max-width: 1100px;
     margin: auto;
@@ -35,16 +36,20 @@ body {
     align-items: center;
     padding: 15px 20px;
 }
+
 .contenedor-header header .logo a{
     font-family: 'Righteous';
     font-size: 36px;
     color: #00ff11;
     text-decoration: none;
 }
+
 .contenedor-header header ul{
+    align-items: center;
     display: flex;
     list-style: none;
 }
+
 .contenedor-header header nav ul li a{
     text-align: none;
     color: #fff;
@@ -53,9 +58,11 @@ body {
     transition: .5s;
     text-decoration: none;
 }
+
 .contenedor-header header nav ul li a:hover{
     color: #00ff11;
 }
+
 .nav-responsive{
     background-color: #0a9713;
     color:#fff;
@@ -64,6 +71,7 @@ body {
     cursor: pointer;
     display: none;
 }
+
 /*inicio*/
 .inicio{
     background: url(images/fondo.png) no-repeat center;
@@ -323,6 +331,31 @@ footer .arriba{
     border-radius: 50%;
     line-height: 50px;
     font-size: 18px;
+}
+
+/* SECCION RESPONSIVE */
+@media screen and (max-width:980px){
+    nav{
+        display: none;
+    }
+    .nav-responsive{
+        display: block;
+    }
+    nav.responsive{
+        display: block;
+        position: absolute;
+        right: 0;
+        top: 75px;
+        background-color: #252A2E;
+        width: 180px;
+    }
+    nav.responsive ul{
+        display: block !important;
+    }
+    nav.responsive ul li{
+        border-bottom: 1px solid #fff;
+        padding: 10px 0;
+    }
 }
 
 @media(max-width: 991px ) {
