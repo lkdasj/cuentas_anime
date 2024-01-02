@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Cuentas Anime</title>
+    <title>Cuentas Pymes</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/icono.png">
 </head>
@@ -15,7 +15,8 @@
 
     <header>
 
-        <div class="contenedor-header">
+        <!--menu barra-->
+        <div id="inicio" class="contenedor-header">
             <header>
                 <div class="logo">
                     <a href="https://ignacio-j3.github.io/huaso_friki/">Huaso Friki</a>
@@ -27,22 +28,21 @@
                         <li><a href="#perfiles" onclick="seleccionar()">PERFILES</a></li>
                         <li><a href="#info" onclick="seleccionar()">COMO<br>‎ ‎ ‎ AGREGARME</a></li>
                         <li><a href="https://ignacio-j3.github.io/huaso_friki/" onclick="seleccionar()">PAGINA<br>‎ ‎ ‎ PRINCIPAL</a></li>
-    
-                    </ul>
+                     </ul>
                 </nav>
                 <div class="nav-responsive" onclick="mostrarOcultarMenu()">
-                    <i class="fa-solid fa-bars"></i>
+                   <i class="fa fa-bars"></i>
                 </div>
             </header>
         </div>    
 
         <!--inicio-->
-        <section id="inicio" class="inicio">
+        <section class="inicio">
             <div class="contenido-banner">
                 <div class="contenedor-img">
                     <img src="images/inicio.png" alt="">
                 </div>
-                <h1>Cuentas anime</h1>
+                <h1>Cuentas Anime</h1>
                 <p>
                     Aqui hay una lista de perfiles que publican capitulos de anime de las cuales algunas estan activas y otras inactivas.
                 </p>
@@ -51,22 +51,33 @@
 
     </header>
 
-
+    
     <main class="product-menu">
-        <div class="container">
-
+        <div class="container" id="tienda">
+            <div class="contenedor">
             <div class="product">
-                <h2 class="title">perfiles</h2>
-                <img class="hoja" src="images/esquina.pn" alt="">
+                <h2 class="titulo">Perfiles</h2>
+            </div>
+            <!-- selector de categoria -->
+            <div class="select-zone">
+                <label for="opciones">Seleccione el estado de perfil:</label>
+                <select id="opciones">
+                    <option value="cajapresentacion" selected disabled>seleccione un estado...</option>
+                    <option value="pro1">Activas</option>
+                    <option value="pro2">Inactivas</option>
+                </select>
+             </div>
             </div>
 
-        <!--Barrera de informacion del menu o contenido-->
-            <div id="perfiles" class="menu-nav">
-                <div id="pro1" class="tab active">activas</div>
-                <div id="pro2" class="tab">inactivas</div>
-            </div>
+            <br>
 
-       <!--Pagina 1 de activos-->
+        <!--categorias-->
+        <div class="cajapresentacion" id="cajacategory">
+            <div class="column">
+            </div>
+        </div>
+
+       <!--Pagina 1 de carga de figuras-->
             <div class="pro1 tab-content">
                 <div class="box-container-1">
 
@@ -171,12 +182,12 @@
                             </p>
                         </div>
                     </div>
-                    
+
 
                 </div>
             </div>
 
-        <!--Pagina 2 inactivos-->
+        <!--Pagina 2 de carga de comida-->
             <div class="pro2 tab-content">
                 <div class="box-container-2">
 
@@ -187,7 +198,7 @@
                         <div class="content">
                             <h3>Anime Viewer</h3>
                             <p>
-                                Cuenta publica: Inactivo por tiempo indefinido.<br>‎ 
+                                Cuenta publica: Inactivo por tiempo indefinido.<br>‎
                                 <br>
                                 <a href="https://www.instagram.com/anime_viewer_/">
                                     <span class="buy"><img src="images/insta.png" alt=""><br>Ir al perfil de instagram</span>
@@ -205,6 +216,7 @@
                             <h3>Naru caps</h3>
                             <p>
                                 Cuenta publica: naruto y naruto shippuden completo, boruto quedo en el 248.
+                                <br>
                                 <br>
                                 <a href="https://www.instagram.com/naru.caps/?utm_source=qr&igshid=NGExMmI2YTkyZg%3D%3D">
                                     <span class="buy"><img src="images/insta.png" alt=""><br>Ir al perfil de instagram</span>
@@ -321,7 +333,7 @@
                             <img src="perfiles fotos/__ver.anime.en.latino__.jpg" alt="">
                         </div>
                         <div class="content">
-                            <h3>__ver.anime.en.latino__</h3>
+                            <h3>ver.anime.latino</h3>
                             <p>
                                 Cuenta privada
                                 <br>
@@ -336,25 +348,30 @@
                 </div>
             </div>
 
+
+            <div class="pagination">
+                <button onclick="cambiarPagina(-1)">Anterior</button>
+                <span id="paginaActual">1</span>
+                <button onclick="cambiarPagina(1)">Siguiente</button>
+            </div>
+
         </div>
     </main>
-
-    <div id="info" class="informacion">
-        <h1>Como añadir mi cuenta?</h1>
-        <p>
-            Para agregar tu cuenta anime debes hablarme o consultarme por whatsapp
-        </p>
-        <a href="https://api.whatsapp.com/send?phone=+56934532754&text=Como%20puedo%20agregar%20mi%20cuenta%20anime%20a%20la%20p%C3%A1gina%20web?" class="btn"><img src="images/whatsapp.png" alt=""><br>Whatsapp</a>
-    </div>
 
     <footer class="footer container">
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
-        <img class="logo-2" src="images/logo.png" alt="">
+        <div id="info" class="informacion">
+            <h1>Como añadir mi cuenta?</h1>
+            <p>
+                Para agregar tu cuenta anime debes hablarme o consultarme por Instagram
+            </p>
+            <a href="https://ig.me/m/huasito_friki" class="btn"><img src="images/insta.png" alt=""><br>Instagram</a>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 
 </html>
