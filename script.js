@@ -78,10 +78,7 @@ function showPage(page, category) {
     updatePaginationButtons(Math.ceil(boxes.length / (isMobile() ? boxesPerPageMobile : boxesPerPage)));
 }
 function isMobile() {
-    // Aquí puedes agregar la lógica para determinar si estás en un dispositivo móvil.
-    // Puedes utilizar la anchura de la ventana (window.innerWidth) o alguna biblioteca de detección de dispositivos.
-    // El siguiente es solo un ejemplo de cómo puedes implementar esta función.
-    return window.innerWidth <= 767; // Cambia el valor según tus necesidades.
+    return window.innerWidth <= 767; 
 }
 
 function updatePaginationButtons(totalPages) {
